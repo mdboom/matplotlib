@@ -1478,6 +1478,8 @@ class FigureCanvasBase(object):
         'close_event'
     ]
 
+    supports_blit = True
+
     def __init__(self, figure):
         figure.set_canvas(self)
         self.figure = figure

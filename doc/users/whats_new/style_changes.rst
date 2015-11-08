@@ -16,6 +16,10 @@ These changes include:
   numbers.  To use the old behavior, set the ``rcParam``
   ``axes.autolimit_mode`` to ``round_numbers``.
 
+- The default cycle of colors to draw lines, markers and other content
+  has been changed.  It is based on the Dark2 qualitative color
+  palette from `colorbrewer <http://colorbrewer2.org/>`__.
+
 - Grid lines are light grey solid 1pt lines.  They are no longer dashed by
   default.
 

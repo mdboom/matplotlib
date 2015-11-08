@@ -312,7 +312,9 @@ backend      : %(backend)s
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-#axes.prop_cycle    : cycler('color', 'bgrcmyk')
+#axes.prop_cycle    : cycler('color',
+#                            ['#d95f02', '#7570b3', '#e7298a', '#66a61e',
+                             '#e6ab02', '#a6761d', '#666666'])
                                             # color cycle for plot lines
                                             # as list of string colorspecs:
                                             # single letter, long name, or

@@ -11,6 +11,9 @@ These changes include:
 
 - The default figure background color is now white.
 
+- Grid lines are light grey solid 1pt lines.  They are no longer dashed by
+  default.
+
 - By default, the number of points displayed in a legend is now 1.
 
 - By default, caps on the ends of errorbars are not present.

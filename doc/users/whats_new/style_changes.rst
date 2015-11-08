@@ -13,5 +13,7 @@ These changes include:
 
 - By default, the number of points displayed in a legend is now 1.
 
+- By default, caps on the ends of errorbars are not present.
+
 - The ''Blues'' colormap has been adjusted to be perceptually uniform.  The old
   ``blues`` colormap is available under the name ``legacy_Blues``.

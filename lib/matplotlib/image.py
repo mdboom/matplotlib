@@ -117,6 +117,10 @@ class _AxesImageBase(martist.Artist, cm.ScalarMappable):
 
         self.set_interpolation(interpolation)
         self.set_resample(resample)
+        self.set_margins({'top': False,
+                          'bottom': False,
+                          'left': False,
+                          'right': False})
         self.axes = ax
 
         self._imcache = None

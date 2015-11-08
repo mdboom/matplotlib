@@ -11,6 +11,11 @@ These changes include:
 
 - The default figure background color is now white.
 
+- The limits are scaled to exactly the dimensions of the data, plus 5%
+  padding.  The old behavior was to scale to the nearest "round"
+  numbers.  To use the old behavior, set the ``rcParam``
+  ``axes.autolimit_mode`` to ``round_numbers``.
+
 - Grid lines are light grey solid 1pt lines.  They are no longer dashed by
   default.
 

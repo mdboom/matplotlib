@@ -59,7 +59,7 @@ backend      : %(backend)s
 
 # When True, the figures rendered in the nbagg backend are created with
 # a transparent background.
-# nbagg.transparent : True
+# nbagg.transparent : False
 
 # if you are running pyplot inside a GUI and your backend choice
 # conflicts, we will automatically try to find a compatible one for
@@ -384,7 +384,7 @@ backend      : %(backend)s
 #figure.titleweight : normal   # weight of the figure title
 #figure.figsize   : 8, 6    # figure size in inches
 #figure.dpi       : 80      # figure dots per inch
-#figure.facecolor : 0.75    # figure facecolor; 0.75 is scalar gray
+#figure.facecolor : white   # figure facecolor; 0.75 is scalar gray
 #figure.edgecolor : white   # figure edgecolor
 #figure.autolayout : False  # When True, automatically adjust subplot
                             # parameters to make the plot fit the figure

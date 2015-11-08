@@ -9,6 +9,8 @@ are designed to work well in the most common cases.
 
 These changes include:
 
+- The default figure background color is now white.
+
 - By default, the number of points displayed in a legend is now 1.
 
 - The ''Blues'' colormap has been adjusted to be perceptually uniform.  The old

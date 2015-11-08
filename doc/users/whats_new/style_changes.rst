@@ -20,6 +20,12 @@ These changes include:
   has been changed.  It is based on the Dark2 qualitative color
   palette from `colorbrewer <http://colorbrewer2.org/>`__.
 
+- The default date formats are now all based on ISO format, i.e., with
+  the slowest-moving value first.  The date formatters are still
+  changeable through the ``date.autoformatter.*`` rcParams.  Python's
+  ``%x`` and ``%X`` date formats may be of particular interest to
+  format dates based on the current locale.
+
 - Grid lines are light grey solid 1pt lines.  They are no longer dashed by
   default.
 

@@ -31,6 +31,10 @@ These changes include:
 
 - By default, the number of points displayed in a legend is now 1.
 
+- The default legend location is ``best``, so the legend will be
+  automatically placed in a location to obscure the least amount of
+  data possible.
+
 - By default, caps on the ends of errorbars are not present.
 
 - The ''Blues'' colormap has been adjusted to be perceptually uniform.  The old

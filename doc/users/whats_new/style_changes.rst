@@ -38,6 +38,8 @@ These changes include:
   automatically placed in a location to obscure the least amount of
   data possible.
 
+- The default mode for image interpolation is now ``nearest``.
+
 - By default, caps on the ends of errorbars are not present.
 
 - The ''Blues'' colormap has been adjusted to be perceptually uniform.  The old

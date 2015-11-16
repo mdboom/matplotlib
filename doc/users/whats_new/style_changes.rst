@@ -24,6 +24,9 @@ These changes include:
   has been changed.  It is based on the Dark2 qualitative color
   palette from `colorbrewer <http://colorbrewer2.org/>`__.
 
+- The default color map used for images and pcolor meshes, etc., has
+  changed from ``jet`` to ``viridis``.
+
 - For markers, scatter plots, bar charts and pie charts, there is no
   longer a black outline around filled markers by default.
 
@@ -57,5 +60,6 @@ These changes include:
 
 - By default, caps on the ends of errorbars are not present.
 
-- The ''Blues'' colormap has been adjusted to be perceptually uniform.  The old
-  ``blues`` colormap is available under the name ``legacy_Blues``.
+- The ''Blues'' colormap has been adjusted to be perceptually uniform.
+  The old ``blues`` colormap is available under the name
+  ``legacy_Blues``.

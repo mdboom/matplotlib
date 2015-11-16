@@ -24,8 +24,8 @@ These changes include:
   has been changed.  It is based on the Dark2 qualitative color
   palette from `colorbrewer <http://colorbrewer2.org/>`__.
 
-- For markers and scatter plots, there is no longer a black outline
-  around filled markers by default.
+- For markers, scatter plots, bar charts and pie charts, there is no
+  longer a black outline around filled markers by default.
 
 - The default font has changed from "Bitstream Vera Sans" to "DejaVu
   Sans".  "DejaVu Sans" is an improvement on "Bistream Vera Sans" that

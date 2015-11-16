@@ -23,6 +23,17 @@ These changes include:
 - For markers and scatter plots, there is no longer a black outline
   around filled markers by default.
 
+- The default font has changed from "Bitstream Vera Sans" to "DejaVu
+  Sans".  "DejaVu Sans" is an improvement on "Bistream Vera Sans" that
+  adds more international and math characters, but otherwise should
+  have the same appearance.
+
+- The default math font when using the built-in math rendering engine
+  (mathtext) has changed from "Computer Modern" (i.e. LaTeX-like) to
+  "DejaVu Sans".  To revert to the old behavior, set the ``rcParam``
+  ``mathtext.fontset`` to ``cm``.  This change has no effect if the
+  TeX backend is used (i.e. ``text.usetex`` is ``True``).
+
 - The default date formats are now all based on ISO format, i.e., with
   the slowest-moving value first.  The date formatters are still
   changeable through the ``date.autoformatter.*`` rcParams.  Python's

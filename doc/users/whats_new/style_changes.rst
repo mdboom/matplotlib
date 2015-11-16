@@ -16,6 +16,10 @@ These changes include:
   numbers.  To use the old behavior, set the ``rcParam``
   ``axes.autolimit_mode`` to ``round_numbers``.
 
+- Ticks now point outward by default, and are 1pt longer.  To have
+  ticks pointing inward, use the ``rcParams`` ``xtick.direction`` and
+  ``ytick.direction``.
+
 - The default cycle of colors to draw lines, markers and other content
   has been changed.  It is based on the Dark2 qualitative color
   palette from `colorbrewer <http://colorbrewer2.org/>`__.

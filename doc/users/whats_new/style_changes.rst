@@ -39,9 +39,8 @@ Plot layout
   numbers.  To use the old behavior, set the ``rcParam``
   ``axes.autolimit_mode`` to ``round_numbers``.
 
-- Ticks now point outward by default, and are 1pt longer.  To have
-  ticks pointing inward, use the ``rcParams`` ``xtick.direction`` and
-  ``ytick.direction``.
+- Ticks now point outward by default.  To have ticks pointing inward,
+  use the ``rcParams`` ``xtick.direction`` and ``ytick.direction``.
 
 - By default, caps on the ends of errorbars are not present.
 

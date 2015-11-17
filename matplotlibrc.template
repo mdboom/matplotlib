@@ -354,8 +354,8 @@ backend      : %(backend)s
 #xtick.bottom         : True   # draw ticks on the bottom side
 #xtick.major.size     : 4      # major tick size in points
 #xtick.minor.size     : 2      # minor tick size in points
-#xtick.major.width    : 0.5    # major tick width in points
-#xtick.minor.width    : 0.5    # minor tick width in points
+#xtick.major.width    : 1.0    # major tick width in points
+#xtick.minor.width    : 1.0    # minor tick width in points
 #xtick.major.pad      : 4      # distance to major tick label in points
 #xtick.minor.pad      : 4      # distance to the minor tick label in points
 #xtick.color          : k      # color of the tick labels
@@ -366,8 +366,8 @@ backend      : %(backend)s
 #ytick.right          : True   # draw ticks on the right side
 #ytick.major.size     : 4      # major tick size in points
 #ytick.minor.size     : 2      # minor tick size in points
-#ytick.major.width    : 0.5    # major tick width in points
-#ytick.minor.width    : 0.5    # minor tick width in points
+#ytick.major.width    : 1.0    # major tick width in points
+#ytick.minor.width    : 1.0    # minor tick width in points
 #ytick.major.pad      : 4      # distance to major tick label in points
 #ytick.minor.pad      : 4      # distance to the minor tick label in points
 #ytick.color          : k      # color of the tick labels
@@ -376,14 +376,14 @@ backend      : %(backend)s
 
 
 ### GRIDS
-#grid.color       :   '#808080' # grid color
+#grid.color       :   '#b0b0b0' # grid color
 #grid.linestyle   :   -         # solid
-#grid.linewidth   :   0.5       # in points
+#grid.linewidth   :   1.0       # in points
 #grid.alpha       :   1.0       # transparency, between 0.0 and 1.0
 
 ### Legend
-#legend.fancybox      : False  # if True, use a rounded box for the
-                               # legend, else a rectangle
+#legend.fancybox      : True  # if True, use a rounded box for the
+                              # legend, else a rectangle
 #legend.loc           : best
 #legend.isaxes        : True
 #legend.numpoints     : 1      # the number of points in the legend line

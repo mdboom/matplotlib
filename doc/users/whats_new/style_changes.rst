@@ -15,8 +15,8 @@ Colors
 - The default figure background color has changed from grey to white.
 
 - The default cycle of colors to draw lines, markers and other content
-  has been changed.  It is based on the Dark2 qualitative color
-  palette from `colorbrewer <http://colorbrewer2.org/>`__.
+  has been changed.  It is based on the `Vega category10 palette
+  <https://github.com/vega/vega/wiki/Scales#scale-range-literals>`__.
 
 - The default color map used for images and pcolor meshes, etc., has
   changed from ``jet`` to ``viridis``.

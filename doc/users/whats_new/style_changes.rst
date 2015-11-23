@@ -1,7 +1,7 @@
 Changes to the default style
 ----------------------------
 
-The most important feature in matplotlib 2.0 are the changes to the
+The most important changes in matplotlib 2.0 are the changes to the
 default style.
 
 While it is impossible to select the best default for all cases, these
@@ -33,6 +33,9 @@ Colors
 
 Plot layout
 ```````````
+
+- The number of ticks on an axis is now automatically determined based
+  on the length of the axis.
 
 - The limits are scaled to exactly the dimensions of the data, plus 5%
   padding.  The old behavior was to scale to the nearest "round"

@@ -7,6 +7,7 @@ from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 
 from matplotlib.externals import six
+from matplotlib import rcParams
 
 import math
 import copy
@@ -46,6 +47,7 @@ def tick_update_position(tick, tickxs, tickys, labelpos):
             label.set_position(labelpos)
 
     tick.tick1On, tick.tick2On = True, False
+    tick.tick1line.set_linewidth(rcParams['xtick.major.width'])
     tick.tick1line.set_linestyle('-')
     tick.tick1line.set_marker('')
     tick.tick1line.set_data(tickxs, tickys)

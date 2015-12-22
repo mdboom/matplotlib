@@ -126,16 +126,16 @@ def get_base_dirs():
     """
     if options['basedirlist']:
         return options['basedirlist']
-    
+
     if os.environ.get('MPLBASEDIRLIST'):
         return os.environ.get('MPLBASEDIRLIST').split(os.pathsep)
 
     win_bases = ['win32_static', ]
-    # on conda windows, we also add the <installdir>\Library of the local interperter, 
+    # on conda windows, we also add the <installdir>\Library of the local interpreter,
     # as conda installs libs/includes there
     if os.getenv('CONDA_DEFAULT_ENV'):
         win_bases.append(os.path.join(os.getenv('CONDA_DEFAULT_ENV'), "Library"))
-    
+
     basedir_map = {
         'win32': win_bases,
         'darwin': ['/usr/local/', '/usr', '/usr/X11',
@@ -153,7 +153,7 @@ def get_include_dirs():
     """
     include_dirs = [os.path.join(d, 'include') for d in get_base_dirs()]
     if sys.platform != 'win32':
-        # gcc includes this dir automatically, so also look for headers in 
+        # gcc includes this dir automatically, so also look for headers in
         # these dirs
         include_dirs.extend(
             os.environ.get('CPLUS_INCLUDE_PATH', '').split(os.pathsep))
@@ -1136,11 +1136,13 @@ class Image(SetupPackage):
         sources = [
             'src/_image.cpp',
             'src/mplutils.cpp',
-            'src/_image_wrapper.cpp'
+            'src/_image_wrapper.cpp',
+            'src/py_converters.cpp'
             ]
         ext = make_extension('matplotlib._image', sources)
         Numpy().add_flags(ext)
         LibAgg().add_flags(ext)
+
         return ext
 
 
@@ -1588,7 +1590,7 @@ class BackendTkAgg(OptionalBackendPackage):
             if os.getenv('CONDA_DEFAULT_ENV'):
                 # We are in conda and conda builds against tcl85 for all versions
                 # includes are directly in the conda\library\include dir and
-                # libs in DLL or lib 
+                # libs in DLL or lib
                 ext.include_dirs.extend(['include'])
                 ext.libraries.extend(['tk85', 'tcl85'])
                 ext.library_dirs.extend(['dlls']) # or lib?

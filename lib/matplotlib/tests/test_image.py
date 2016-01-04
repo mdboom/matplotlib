@@ -411,6 +411,7 @@ def test_bbox_image_inverted():
 
     bbox_im = BboxImage(Bbox([[100, 100], [0, 0]]))
     bbox_im.set_data(image)
+    bbox_im.set_clip_on(False)
     axes.add_artist(bbox_im)
 
 

@@ -15,6 +15,7 @@ from matplotlib import mlab
 from nose.tools import assert_raises
 from numpy.testing import (
     assert_array_equal, assert_array_almost_equal, assert_allclose)
+from matplotlib.testing.noseclasses import KnownFailureTest
 
 import io
 import os
@@ -92,6 +93,8 @@ def test_image_python_io():
     buffer.seek(0)
     plt.imread(buffer)
 
+
+@cleanup
 @knownfailureif(not HAS_PIL)
 def test_imread_pil_uint16():
     img = plt.imread(os.path.join(os.path.dirname(__file__),
@@ -108,6 +111,8 @@ def test_imread_pil_uint16():
 #     plt.imread(fname)
 #     os.remove(fname)
 
+
+@cleanup
 def test_imsave():
     # The goal here is that the user can specify an output logical DPI
     # for the image, but this will not actually add any extra pixels
@@ -396,8 +401,7 @@ def test_rasterize_dpi():
     rcParams['savefig.dpi'] = 10
 
 
-@image_comparison(baseline_images=['bbox_image_inverted'],
-                  extensions=['png', 'pdf'])
+@cleanup
 def test_bbox_image_inverted():
     # This is just used to produce an image to feed to BboxImage
     fig = plt.figure()
@@ -505,6 +509,7 @@ def test_log_scale_image():
     ax.imshow(Z, extent=[1, 100, 1, 100], cmap='viridis',
               vmax=abs(Z).max(), vmin=-abs(Z).max())
     ax.set_yscale('log')
+
 
 
 @image_comparison(baseline_images=['rotate_image'],

@@ -13,7 +13,7 @@ from setuptools.command.build_ext import build_ext as BuildExtCommand
 
 import sys
 
-# distutils is breaking our sdists for files in symlinked dirs.
+# distutils is breaking our sdists for files in symlin ked dirs.
 # distutils will copy if os.link is not available, so this is a hack
 # to force copying
 import os

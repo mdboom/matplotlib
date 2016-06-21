@@ -1219,8 +1219,11 @@ class BoundaryNorm(Normalize):
         iret[xx < self.vmin] = -1
         iret[xx >= self.vmax] = max_col
         ret = ma.array(iret, mask=mask)
+        if ret.dtype.kind != 'f':
+            ret = ma.array(ret, dtype=np.float) / (self.Ncmap - 1)
         if is_scalar:
             ret = int(ret[0])  # assume python scalar
+
         return ret
 
     def inverse(self, value):

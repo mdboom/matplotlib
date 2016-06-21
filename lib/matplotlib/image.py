@@ -363,12 +363,11 @@ class _ImageBase(martist.Artist, cm.ScalarMappable):
                 rgba = np.empty((A.shape[0], A.shape[1], 4), dtype=A.dtype)
                 rgba[..., 0] = A  # normalized data
                 rgba[..., 1] = A < 0  # under data
-                # TODO, ask the norm or colormap what this threshold should be
                 rgba[..., 2] = A > 1  # over data
                 if A.dtype.kind == 'f':
                     rgba[..., 3] = ~A.mask
                 else:
-                    rgba[..., 3] = np.where(A.mask, 0, np.iinfo(A.dtype).max)
+                    raise RuntimeError("Norms shouldn't return integers")
                 A = rgba
                 output = np.zeros((out_height, out_width, 4), dtype=A.dtype)
                 alpha = 1.0
